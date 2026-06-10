@@ -1,0 +1,741 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>AMV Patrimônio — Consultoria Patrimonial Estratégica</title>
+<link rel="stylesheet" href="assets/site.css">
+<script src="assets/image-slot.js"></script>
+<!-- ext-resource-dependency: image-slot src lives on a custom element, so the bundler can't auto-inline it. Register each photo here; a runtime script below overrides the slot src from window.__resources when bundled (Unsplash URL stays as online fallback). -->
+<meta name="ext-resource-dependency" content="https://images.unsplash.com/photo-1600596542815-ffad4c1539a9?auto=format&fit=crop&w=1100&q=80" data-resource-id="hero" />
+<meta name="ext-resource-dependency" content="https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?auto=format&fit=crop&w=900&q=80" data-resource-id="step1" />
+<meta name="ext-resource-dependency" content="https://images.unsplash.com/photo-1512917774080-9991f1c4c750?auto=format&fit=crop&w=900&q=80" data-resource-id="step2" />
+<meta name="ext-resource-dependency" content="https://images.unsplash.com/photo-1560518883-ce09059eeffa?auto=format&fit=crop&w=900&q=80" data-resource-id="step3" />
+<meta name="ext-resource-dependency" content="https://images.unsplash.com/photo-1502672260266-1c1ef2d93688?auto=format&fit=crop&w=900&q=80" data-resource-id="case1" />
+<meta name="ext-resource-dependency" content="https://images.unsplash.com/photo-1560448204-e02f11c3d0e2?auto=format&fit=crop&w=900&q=80" data-resource-id="case2" />
+<meta name="ext-resource-dependency" content="https://images.unsplash.com/photo-1512453979798-5ea266f8880c?auto=format&fit=crop&w=900&q=80" data-resource-id="case3" />
+<meta name="ext-resource-dependency" content="https://images.unsplash.com/photo-1560250097-0b93528c311a?auto=format&fit=crop&w=200&q=80" data-resource-id="tst1" />
+<meta name="ext-resource-dependency" content="https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?auto=format&fit=crop&w=200&q=80" data-resource-id="tst2" />
+<meta name="ext-resource-dependency" content="https://images.unsplash.com/photo-1500648767791-00dcc994a43e?auto=format&fit=crop&w=200&q=80" data-resource-id="tst3" />
+<meta name="ext-resource-dependency" content="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&w=800&q=80" data-resource-id="founder" />
+</head>
+<body>
+
+<template id="__bundler_thumbnail" data-bg-color="#0D1B2A">
+  <svg viewBox="0 0 1200 800" xmlns="http://www.w3.org/2000/svg">
+    <rect width="1200" height="800" fill="#0D1B2A"/>
+    <circle cx="600" cy="400" r="250" fill="none" stroke="#C9A84C" stroke-opacity="0.25" stroke-width="2"/>
+    <circle cx="600" cy="400" r="180" fill="none" stroke="#C9A84C" stroke-opacity="0.18" stroke-width="2"/>
+    <path d="M600 250 L710 400 L600 550 L490 400 Z" fill="none" stroke="#C9A84C" stroke-width="5" stroke-linejoin="round"/>
+    <path d="M490 400 H710" stroke="#C9A84C" stroke-width="2.5" stroke-opacity="0.55"/>
+    <text x="600" y="650" fill="#FFFFFF" font-family="Georgia, serif" font-size="64" font-weight="700" letter-spacing="14" text-anchor="middle">AMV</text>
+    <text x="600" y="695" fill="#C9A84C" font-family="system-ui, sans-serif" font-size="20" letter-spacing="20" text-anchor="middle">PATRIMÔNIO</text>
+  </svg>
+</template>
+
+<!-- ============ REUSABLE MARK ============ -->
+<svg width="0" height="0" style="position:absolute" aria-hidden="true">
+  <defs>
+    <symbol id="m-diamond" viewBox="0 0 72 96">
+      <path d="M36 4 L66 48 L36 92 L6 48 Z" fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/>
+      <path d="M6 48 H66" stroke="currentColor" stroke-width="1" stroke-opacity=".55"/>
+      <path d="M36 4 L22 48 L36 92" fill="none" stroke="currentColor" stroke-width="1" stroke-opacity=".5" stroke-linejoin="round"/>
+      <path d="M36 4 L50 48 L36 92" fill="none" stroke="currentColor" stroke-width="1" stroke-opacity=".5" stroke-linejoin="round"/>
+    </symbol>
+  </defs>
+</svg>
+
+<!-- ============ NAV ============ -->
+<header class="nav" id="nav">
+  <div class="nav-in">
+    <a href="#topo" class="lock" style="--gap:14px;">
+      <svg class="mark" style="color:var(--ouro)" width="30" height="40"><use href="#m-diamond"/></svg>
+      <div class="wm wm-on-dark" style="--amv:21px;--pat:7px;"><span class="amv">AMV</span><span class="pat">Patrimônio</span></div>
+    </a>
+    <nav class="nav-links">
+      <a href="#posicionamento">A Consultoria</a>
+      <a href="#metodo">Método LAR</a>
+      <a href="#pilares">Estratégia</a>
+      <a href="#caminhos">Caminhos</a>
+      <a href="#cases">Cases</a>
+      <a href="#processo">Processo</a>
+    </nav>
+    <a href="#diagnostico" class="nav-cta">Diagnóstico Patrimonial</a>
+    <div class="nav-burger" id="burger"><span></span><span></span><span></span></div>
+  </div>
+</header>
+
+<!-- ============ HERO ============ -->
+<section class="hero" id="topo" data-screen-label="Hero">
+  <div class="hero-bg-grad"></div>
+  <div class="wrap hero-in with-img">
+    <div class="hero-copy">
+      <div class="hero-badge"><span class="pulse"></span>Grupo AMV · Consultoria Patrimonial</div>
+      <h1>Patrimônio não é<br>construído por acaso.<br><em>É construído com método.</em></h1>
+      <p class="hero-sub">Ajudamos pessoas e empresas a construir, proteger e ampliar patrimônio com estratégia, segurança e visão de longo prazo — usando o consórcio como ferramenta inteligente, não como produto.</p>
+      <div class="hero-actions">
+        <a href="#diagnostico" class="btn btn-gold">Iniciar Diagnóstico Patrimonial <span class="arr">→</span></a>
+        <a href="#posicionamento" class="btn btn-ghost">Conhecer a consultoria</a>
+      </div>
+      <div class="hero-stats">
+        <div class="hstat"><div class="n">10+</div><div class="l">anos do Grupo AMV<br>no mercado</div></div>
+        <div class="hstat"><div class="n">1.100+</div><div class="l">clientes ativos<br>na base</div></div>
+        <div class="hstat"><div class="n">R$ 1 bi</div><div class="l">em créditos<br>visão 2030</div></div>
+      </div>
+    </div>
+    <div class="hero-img-wrap">
+      <div class="img-frame">
+        <image-slot id="hero" class="hero-img" shape="rect" fit="cover"
+          src="https://images.unsplash.com/photo-1600596542815-ffad4c1539a9?auto=format&fit=crop&w=1100&q=80"
+          placeholder="Arraste uma imagem (imóvel / ambiente premium)"></image-slot>
+      </div>
+      <div class="hero-img-tag">
+        <div class="ico"><svg class="mark" style="color:var(--ouro)" width="20" height="27"><use href="#m-diamond"/></svg></div>
+        <div class="t"><b>Método LAR</b><span>Lucro · Alavancagem · Renda</span></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ AUTORIDADE ============ -->
+<section class="sec tight" data-screen-label="Autoridade">
+  <div class="wrap">
+    <div class="auth reveal">
+      <div class="auth-cell">
+        <div class="n">+10 <em>anos</em></div>
+        <div class="l">De atuação consultiva do Grupo AMV, com relacionamento e credibilidade construídos no longo prazo.</div>
+      </div>
+      <div class="auth-cell">
+        <div class="n">1.100+</div>
+        <div class="l">Clientes ativos na base AMV, com geração recorrente de novas oportunidades todos os meses.</div>
+      </div>
+      <div class="auth-cell">
+        <div class="n">56,7<em>%</em></div>
+        <div class="l">Do crédito do sistema de consórcios em 2025 foi imobiliário — o ativo central da construção patrimonial.</div>
+      </div>
+      <div class="auth-cell">
+        <div class="n">R$ 500 <em>bi</em></div>
+        <div class="l">Em créditos comercializados pelo setor em 2025, um mercado em recorde histórico de crescimento.</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ POSICIONAMENTO ============ -->
+<section class="sec cream" id="posicionamento" data-screen-label="Posicionamento">
+  <div class="wrap">
+    <div class="sec-head reveal">
+      <div class="eyebrow">01 — A Consultoria</div>
+      <h2 class="sec-title">Não vendemos cotas.<br><em>Construímos patrimônio.</em></h2>
+    </div>
+    <div class="pos-grid reveal">
+      <div class="pos-quote">A maioria das pessoas trabalha para gerar renda. Poucas possuem uma <em>estratégia</em> para transformar renda em patrimônio.</div>
+      <div class="pos-body">
+        <p>A AMV Patrimônio nasceu de uma demanda real da base do Grupo AMV. Durante anos ajudamos famílias e empresas a reduzir custos, proteger pessoas e estruturar benefícios. <b>Agora ajudamos a construir, ampliar e gerar renda patrimonial.</b></p>
+        <p>Não atuamos como uma vendedora tradicional de consórcios. Atuamos como <b>consultoria patrimonial estratégica</b>, utilizando o consórcio como ferramenta de planejamento, crescimento e organização — sempre respeitando o perfil, os objetivos e a capacidade financeira de cada cliente.</p>
+        <div class="pos-tags">
+          <span>Estratégia</span>
+          <span>Disciplina</span>
+          <span>Visão de longo prazo</span>
+          <span>Acompanhamento</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ COMO FUNCIONA ============ -->
+<section class="sec" data-screen-label="Como Funciona">
+  <div class="wrap">
+    <div class="sec-head reveal">
+      <div class="eyebrow">02 — A Mecânica</div>
+      <h2 class="sec-title">Como o consórcio<br><em>constrói patrimônio</em></h2>
+      <p class="sec-lead">Sem juros e com capital preservado, cada ciclo de contemplação vira um ativo que pode gerar renda — e financiar o próximo ciclo.</p>
+    </div>
+    <div class="steps reveal">
+      <div class="step">
+        <div class="img-frame">
+          <image-slot id="step1" class="step-img" shape="rect" fit="cover"
+            src="https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?auto=format&fit=crop&w=900&q=80"
+            placeholder="Imagem — planejamento"></image-slot>
+        </div>
+        <div class="step-body">
+          <div class="step-n">1</div>
+          <h3>Planejamento</h3>
+          <p>Definimos objetivo, prazo e capacidade de investimento. A estratégia começa antes da contemplação.</p>
+        </div>
+      </div>
+      <div class="step">
+        <div class="img-frame">
+          <image-slot id="step2" class="step-img" shape="rect" fit="cover"
+            src="https://images.unsplash.com/photo-1512917774080-9991f1c4c750?auto=format&fit=crop&w=900&q=80"
+            placeholder="Imagem — imóvel"></image-slot>
+        </div>
+        <div class="step-body">
+          <div class="step-n">2</div>
+          <h3>Aquisição</h3>
+          <p>A carta contemplada vira um imóvel. Capital preservado, sem o custo dos juros de financiamento.</p>
+        </div>
+      </div>
+      <div class="step">
+        <div class="img-frame">
+          <image-slot id="step3" class="step-img" shape="rect" fit="cover"
+            src="https://images.unsplash.com/photo-1560518883-ce09059eeffa?auto=format&fit=crop&w=900&q=80"
+            placeholder="Imagem — renda"></image-slot>
+        </div>
+        <div class="step-body">
+          <div class="step-n">3</div>
+          <h3>Renda &amp; novo ciclo</h3>
+          <p>O ativo gera renda por locação ou short stay — que acelera a quitação e financia o próximo imóvel.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ SIMULADOR / CONTADORES ============ -->
+<section class="sec dark tight" data-screen-label="Simulador">
+  <div class="wrap">
+    <div class="sec-head center reveal">
+      <div class="eyebrow on-dark center">A força da estratégia</div>
+      <h2 class="sec-title">Pequenas decisões,<br><em>grandes patrimônios</em></h2>
+      <p class="sec-lead">Exemplo ilustrativo do Caminho Crescimento: R$ 4 mil/mês construídos em ciclos sucessivos.</p>
+      <div class="gold-rule"></div>
+    </div>
+    <div class="sim reveal">
+      <div class="sim-cell">
+        <div class="cap">Investimento mensal</div>
+        <div class="val"><span class="pre">R$</span><span class="count" data-to="4000">0</span></div>
+        <div class="sub">aporte planejado e disciplinado</div>
+        <div class="sim-arrow">→</div>
+      </div>
+      <div class="sim-cell">
+        <div class="cap">Patrimônio potencial</div>
+        <div class="val"><span class="pre">R$</span><span class="count" data-to="3" data-suffix=" mi">0</span></div>
+        <div class="sub">em 3 ciclos sucessivos de aquisição</div>
+        <div class="sim-arrow">→</div>
+      </div>
+      <div class="sim-cell">
+        <div class="cap">Renda mensal potencial*</div>
+        <div class="val"><span class="pre">R$</span><span class="count" data-to="21000">0</span></div>
+        <div class="sub">por locação e exploração dos ativos</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ 3 FORMAS ============ -->
+<section class="sec" data-screen-label="3 Formas">
+  <div class="wrap">
+    <div class="sec-head reveal">
+      <div class="eyebrow">03 — Consciência</div>
+      <h2 class="sec-title">Só existem três formas<br>de comprar um patrimônio</h2>
+      <p class="sec-lead">Independentemente do bem, toda aquisição passa por uma destas três alternativas. A questão não é apenas comprar — é <em>como</em> comprar.</p>
+    </div>
+    <div class="forms reveal">
+      <div class="form-card">
+        <div class="form-num">i</div>
+        <h3>À Vista</h3>
+        <div class="form-tag">Aquisição imediata</div>
+        <ul class="form-list">
+          <li>Poder de negociação</li>
+          <li>Ausência de dívida</li>
+          <li>Mas: descapitalização e custo de oportunidade</li>
+        </ul>
+      </div>
+      <div class="form-card">
+        <div class="form-num">ii</div>
+        <h3>Financiamento</h3>
+        <div class="form-tag">Velocidade com custo</div>
+        <ul class="form-list">
+          <li>Aquisição imediata</li>
+          <li>Menor entrada inicial</li>
+          <li>Mas: juros elevados e alto custo final</li>
+        </ul>
+      </div>
+      <div class="form-card hot">
+        <div class="form-num">iii</div>
+        <h3>Consórcio</h3>
+        <div class="form-tag">Ferramenta de planejamento</div>
+        <ul class="form-list">
+          <li>Menor custo financeiro</li>
+          <li>Preservação de capital</li>
+          <li>Planejamento e flexibilidade</li>
+          <li>Exige estratégia, disciplina e horizonte</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ MÉTODO LAR ============ -->
+<section class="sec dark" id="metodo" data-screen-label="Método LAR">
+  <div class="wrap">
+    <div class="sec-head center reveal">
+      <div class="eyebrow on-dark center">04 — Metodologia Própria</div>
+      <h2 class="sec-title">Método <em>LAR</em></h2>
+      <p class="sec-lead">Toda estratégia patrimonial desenvolvida pela AMV busca gerar um ou mais destes três resultados.</p>
+      <div class="gold-rule"></div>
+    </div>
+    <div class="lar-grid reveal">
+      <div class="lar-card">
+        <div class="lar-letter">L</div>
+        <h3>Lucro</h3>
+        <p>Estratégias voltadas à geração de ganho de capital, liquidez e reinvestimento — transformando oportunidade em resultado.</p>
+      </div>
+      <div class="lar-card">
+        <div class="lar-letter">A</div>
+        <h3>Alavancagem</h3>
+        <p>Utilização inteligente do crédito para acelerar a construção patrimonial com eficiência de capital e expansão.</p>
+      </div>
+      <div class="lar-card">
+        <div class="lar-letter">R</div>
+        <h3>Renda</h3>
+        <p>Transformação do patrimônio em fluxo de caixa — locação, short stay e valorização de longo prazo.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ 4 PILARES ============ -->
+<section class="sec cream" id="pilares" data-screen-label="Pilares">
+  <div class="wrap">
+    <div class="sec-head reveal">
+      <div class="eyebrow">05 — Execução</div>
+      <h2 class="sec-title">Os 4 pilares da estratégia</h2>
+      <p class="sec-lead">O resultado não depende apenas da carta de crédito. Depende da combinação correta destes quatro pilares ao longo da jornada.</p>
+    </div>
+    <div class="pillars reveal">
+      <div class="pillar">
+        <div class="pillar-ix"><span class="num">01</span><span class="bar"></span></div>
+        <h3>Grupo</h3>
+        <p>Análise de tamanho, regras, histórico de contemplações e perfil dos participantes. Nem todo grupo oferece a mesma oportunidade.</p>
+      </div>
+      <div class="pillar">
+        <div class="pillar-ix"><span class="num">02</span><span class="bar"></span></div>
+        <h3>Multicotas</h3>
+        <p>Diversificação e exposição à contemplação. Em muitos cenários, várias cotas são mais eficientes que uma única de maior valor.</p>
+      </div>
+      <div class="pillar">
+        <div class="pillar-ix"><span class="num">03</span><span class="bar"></span></div>
+        <h3>Lance</h3>
+        <p>Próprio, embutido ou híbrido. O lance não é só antecipação de parcelas — é uma ferramenta estratégica de contemplação.</p>
+      </div>
+      <div class="pillar">
+        <div class="pillar-ix"><span class="num">04</span><span class="bar"></span></div>
+        <h3>Permanência</h3>
+        <p>Disciplina, consistência e estratégia de saída. Patrimônio não se constrói em meses — se constrói ao longo do tempo.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ CAMINHOS ============ -->
+<section class="sec" id="caminhos" data-screen-label="Caminhos">
+  <div class="wrap">
+    <div class="sec-head reveal">
+      <div class="eyebrow">06 — Aplicação Prática</div>
+      <h2 class="sec-title">Caminhos patrimoniais</h2>
+      <p class="sec-lead">Não existe uma estratégia única. Existe a estratégia mais adequada para o momento financeiro de cada pessoa. Veja três cenários ilustrativos por ciclos sucessivos de aquisição.</p>
+    </div>
+    <div class="paths reveal">
+      <div class="path">
+        <div class="path-top">
+          <div class="path-kick">Construção do 1º patrimônio</div>
+          <div class="path-name">Inicial</div>
+          <div class="path-goal">Jovens empresários, casais e profissionais liberais</div>
+        </div>
+        <div class="path-body">
+          <div class="path-row"><span class="k">Investimento mensal</span><span class="v">R$ 2.000</span></div>
+          <div class="path-row"><span class="k">1º imóvel (aprox.)</span><span class="v">R$ 500 mil</span></div>
+          <div class="path-row big"><span class="k">Patrimônio potencial</span><span class="v">R$ 1,5 mi</span></div>
+          <div class="path-foot">
+            <div class="rent">Potencial de renda mensal*<b>R$ 10.500</b></div>
+          </div>
+        </div>
+      </div>
+
+      <div class="path feat">
+        <div class="path-top">
+          <div class="path-kick">Aceleração patrimonial</div>
+          <div class="path-name">Crescimento</div>
+          <div class="path-goal">Empresários, executivos e investidores</div>
+        </div>
+        <div class="path-body">
+          <div class="path-row"><span class="k">Investimento mensal</span><span class="v">R$ 4.000</span></div>
+          <div class="path-row"><span class="k">1º imóvel (aprox.)</span><span class="v">R$ 1 milhão</span></div>
+          <div class="path-row big"><span class="k">Patrimônio potencial</span><span class="v">R$ 3 mi</span></div>
+          <div class="path-foot">
+            <div class="rent">Potencial de renda mensal*<b>R$ 21.000</b></div>
+          </div>
+        </div>
+      </div>
+
+      <div class="path">
+        <div class="path-top">
+          <div class="path-kick">Escala patrimonial</div>
+          <div class="path-name">Expansão</div>
+          <div class="path-goal">Investidores e clientes com capital para lance</div>
+        </div>
+        <div class="path-body">
+          <div class="path-row"><span class="k">Investimento mensal</span><span class="v">R$ 6.000</span></div>
+          <div class="path-row"><span class="k">1º imóvel (aprox.)</span><span class="v">R$ 1,5 mi</span></div>
+          <div class="path-row big"><span class="k">Patrimônio potencial</span><span class="v">R$ 4,5 mi</span></div>
+          <div class="path-foot">
+            <div class="rent">Potencial de renda mensal*<b>R$ 31.500</b></div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <p style="font-size:12px;color:var(--cinza);margin-top:28px;max-width:880px;line-height:1.6;">*Exemplos ilustrativos para demonstrar a lógica da estratégia patrimonial. Os resultados dependem da estratégia adotada, contemplações, comportamento do mercado, capacidade financeira, reinvestimento e execução ao longo do tempo. Renda estimada considerando locação e/ou exploração patrimonial dos ativos.</p>
+  </div>
+</section>
+
+<!-- ============ ESTUDOS DE CASO ============ -->
+<section class="sec cream" id="cases" data-screen-label="Cases">
+  <div class="wrap">
+    <div class="sec-head reveal">
+      <div class="eyebrow">07 — Estudos de Caso</div>
+      <h2 class="sec-title">Estratégia que vira<br><em>patrimônio real</em></h2>
+      <p class="sec-lead">Exemplos ilustrativos de como a estrutura correta transforma um aporte mensal em ativos que geram renda.</p>
+    </div>
+    <div class="cases reveal">
+      <div class="case">
+        <div class="case-img-wrap">
+          <span class="case-chip">Caminho Inicial</span>
+          <div class="img-frame">
+            <image-slot id="case1" class="case-img" shape="rect" fit="cover"
+              src="https://images.unsplash.com/photo-1502672260266-1c1ef2d93688?auto=format&fit=crop&w=900&q=80"
+              placeholder="Foto do imóvel"></image-slot>
+          </div>
+        </div>
+        <div class="case-body">
+          <div class="case-loc">Apartamento · 1º ciclo</div>
+          <div class="case-name">Primeiro patrimônio</div>
+          <div class="case-stats">
+            <div class="case-stat"><div class="k">Aporte mensal</div><div class="v">R$ 2.000</div></div>
+            <div class="case-stat"><div class="k">Valor do imóvel</div><div class="v">R$ 500 mil</div></div>
+            <div class="case-stat"><div class="k">Patrimônio potencial</div><div class="v">R$ 1,5 mi</div></div>
+            <div class="case-stat hot"><div class="k">Renda mensal*</div><div class="v">R$ 10.500</div></div>
+          </div>
+        </div>
+      </div>
+      <div class="case">
+        <div class="case-img-wrap">
+          <span class="case-chip">Caminho Crescimento</span>
+          <div class="img-frame">
+            <image-slot id="case2" class="case-img" shape="rect" fit="cover"
+              src="https://images.unsplash.com/photo-1560448204-e02f11c3d0e2?auto=format&fit=crop&w=900&q=80"
+              placeholder="Foto do imóvel"></image-slot>
+          </div>
+        </div>
+        <div class="case-body">
+          <div class="case-loc">Carteira · 3 ciclos</div>
+          <div class="case-name">Aceleração patrimonial</div>
+          <div class="case-stats">
+            <div class="case-stat"><div class="k">Aporte mensal</div><div class="v">R$ 4.000</div></div>
+            <div class="case-stat"><div class="k">Valor do imóvel</div><div class="v">R$ 1 mi</div></div>
+            <div class="case-stat"><div class="k">Patrimônio potencial</div><div class="v">R$ 3 mi</div></div>
+            <div class="case-stat hot"><div class="k">Renda mensal*</div><div class="v">R$ 21.000</div></div>
+          </div>
+        </div>
+      </div>
+      <div class="case">
+        <div class="case-img-wrap">
+          <span class="case-chip">Caminho Expansão</span>
+          <div class="img-frame">
+            <image-slot id="case3" class="case-img" shape="rect" fit="cover"
+              src="https://images.unsplash.com/photo-1512453979798-5ea266f8880c?auto=format&fit=crop&w=900&q=80"
+              placeholder="Foto do imóvel"></image-slot>
+          </div>
+        </div>
+        <div class="case-body">
+          <div class="case-loc">Multicotas · escala</div>
+          <div class="case-name">Escala patrimonial</div>
+          <div class="case-stats">
+            <div class="case-stat"><div class="k">Aporte mensal</div><div class="v">R$ 6.000</div></div>
+            <div class="case-stat"><div class="k">Valor do imóvel</div><div class="v">R$ 1,5 mi</div></div>
+            <div class="case-stat"><div class="k">Patrimônio potencial</div><div class="v">R$ 4,5 mi</div></div>
+            <div class="case-stat hot"><div class="k">Renda mensal*</div><div class="v">R$ 31.500</div></div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <p style="font-size:12px;color:var(--cinza);margin-top:28px;max-width:880px;line-height:1.6;">*Exemplos ilustrativos. Resultados dependem da estratégia adotada, contemplações, comportamento do mercado, capacidade financeira, reinvestimento e execução ao longo do tempo.</p>
+  </div>
+</section>
+
+<!-- ============ PROCESSO ============ -->
+<section class="sec dark" id="processo" data-screen-label="Processo">
+  <div class="wrap">
+    <div class="sec-head center reveal">
+      <div class="eyebrow on-dark center">08 — Como Funciona</div>
+      <h2 class="sec-title">Uma jornada, não<br>um evento isolado</h2>
+      <p class="sec-lead">A construção patrimonial é resultado de uma sequência de escolhas feitas ao longo do tempo. Acompanhamos cada etapa.</p>
+    </div>
+    <div class="proc reveal">
+      <div class="proc-step">
+        <div class="proc-node">1</div>
+        <h4>Diagnóstico</h4>
+        <p>Entendimento do perfil, objetivos e capacidade financeira.</p>
+      </div>
+      <div class="proc-step">
+        <div class="proc-node">2</div>
+        <h4>Planejamento</h4>
+        <p>Construção da estratégia patrimonial personalizada.</p>
+      </div>
+      <div class="proc-step">
+        <div class="proc-node">3</div>
+        <h4>Implementação</h4>
+        <p>Curadoria de administradoras e seleção dos grupos.</p>
+      </div>
+      <div class="proc-step">
+        <div class="proc-node">4</div>
+        <h4>Acompanhamento</h4>
+        <p>Assembleias, lances, contemplações e uso do crédito.</p>
+      </div>
+      <div class="proc-step">
+        <div class="proc-node">5</div>
+        <h4>Evolução</h4>
+        <p>Reinvestimento e novos ciclos de crescimento patrimonial.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ DEPOIMENTOS ============ -->
+<section class="sec cream" data-screen-label="Depoimentos">
+  <div class="wrap">
+    <div class="sec-head reveal">
+      <div class="eyebrow">09 — Quem confia</div>
+      <h2 class="sec-title">Relações de longo prazo,<br><em>não vendas pontuais</em></h2>
+    </div>
+    <div class="tst-grid reveal">
+      <div class="tst">
+        <div class="tst-quote-mark">&rdquo;</div>
+        <p>Eu enxergava só a parcela. A AMV me mostrou o patrimônio que ela podia construir. Hoje tenho meu primeiro imóvel gerando renda.</p>
+        <div class="tst-who">
+          <image-slot id="tst1" class="tst-av" shape="circle"
+            src="https://images.unsplash.com/photo-1560250097-0b93528c311a?auto=format&fit=crop&w=200&q=80"
+            placeholder="Foto"></image-slot>
+          <div><div class="nm">Cliente AMV</div><div class="rl">Empresário · Caminho Inicial</div></div>
+        </div>
+      </div>
+      <div class="tst">
+        <div class="tst-quote-mark">&rdquo;</div>
+        <p>O diferencial foi o acompanhamento. Não terminou na contratação — eles conduziram a estratégia de lance até a contemplação.</p>
+        <div class="tst-who">
+          <image-slot id="tst2" class="tst-av" shape="circle"
+            src="https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?auto=format&fit=crop&w=200&q=80"
+            placeholder="Foto"></image-slot>
+          <div><div class="nm">Cliente AMV</div><div class="rl">Profissional liberal · Crescimento</div></div>
+        </div>
+      </div>
+      <div class="tst">
+        <div class="tst-quote-mark">&rdquo;</div>
+        <p>Consultoria de verdade. Entenderam meu momento e montaram uma estratégia de multicotas que faz sentido para a minha realidade.</p>
+        <div class="tst-who">
+          <image-slot id="tst3" class="tst-av" shape="circle"
+            src="https://images.unsplash.com/photo-1500648767791-00dcc994a43e?auto=format&fit=crop&w=200&q=80"
+            placeholder="Foto"></image-slot>
+          <div><div class="nm">Cliente AMV</div><div class="rl">Investidor · Expansão</div></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ NA MÍDIA / PARCEIROS ============ -->
+<section class="sec tight" data-screen-label="Parceiros">
+  <div class="wrap">
+    <div class="sec-head center reveal" style="margin-bottom:40px;">
+      <div class="eyebrow center">Ecossistema &amp; Parceiros</div>
+    </div>
+    <div class="media-row reveal">
+      <image-slot id="logo1" class="media-logo" shape="rounded" radius="6" fit="contain" placeholder="Logo parceiro"></image-slot>
+      <image-slot id="logo2" class="media-logo" shape="rounded" radius="6" fit="contain" placeholder="Logo parceiro"></image-slot>
+      <image-slot id="logo3" class="media-logo" shape="rounded" radius="6" fit="contain" placeholder="Logo parceiro"></image-slot>
+      <image-slot id="logo4" class="media-logo" shape="rounded" radius="6" fit="contain" placeholder="Logo parceiro"></image-slot>
+      <image-slot id="logo5" class="media-logo" shape="rounded" radius="6" fit="contain" placeholder="Logo parceiro"></image-slot>
+    </div>
+  </div>
+</section>
+
+<!-- ============ DIFERENCIAIS ============ -->
+<section class="sec cream" data-screen-label="Diferenciais">
+  <div class="wrap">
+    <div class="sec-head reveal">
+      <div class="eyebrow">10 — Por que a AMV</div>
+      <h2 class="sec-title">O cliente não recebe<br>apenas uma estratégia</h2>
+      <p class="sec-lead">Recebe acesso a um ecossistema completo e a um acompanhamento que não termina na contratação da cota.</p>
+    </div>
+    <div class="diff-grid reveal">
+      <div class="diff">
+        <svg class="dm" viewBox="0 0 72 96"><use href="#m-diamond"/></svg>
+        <h3>Curadoria de grupos</h3>
+        <p>Seleção criteriosa de administradoras, grupos e regras alinhados ao perfil e objetivo de cada cliente.</p>
+      </div>
+      <div class="diff">
+        <svg class="dm" viewBox="0 0 72 96"><use href="#m-diamond"/></svg>
+        <h3>Planejamento personalizado</h3>
+        <p>Estratégias desenvolvidas a partir da realidade financeira e patrimonial de cada cliente — sem soluções prontas.</p>
+      </div>
+      <div class="diff">
+        <svg class="dm" viewBox="0 0 72 96"><use href="#m-diamond"/></svg>
+        <h3>Acompanhamento contínuo</h3>
+        <p>Suporte em toda a jornada, da contratação à utilização do crédito e à evolução patrimonial.</p>
+      </div>
+      <div class="diff">
+        <svg class="dm" viewBox="0 0 72 96"><use href="#m-diamond"/></svg>
+        <h3>Ecossistema de parceiros</h3>
+        <p>Rede especializada: mercado secundário, imóveis na planta, locação, short stay e parceiros financeiros.</p>
+      </div>
+      <div class="diff">
+        <svg class="dm" viewBox="0 0 72 96"><use href="#m-diamond"/></svg>
+        <h3>Duas teses estratégicas</h3>
+        <p>Probabilidade para previsibilidade e contemplação; alavancagem para eficiência de capital e expansão.</p>
+      </div>
+      <div class="diff">
+        <svg class="dm" viewBox="0 0 72 96"><use href="#m-diamond"/></svg>
+        <h3>Especialização certificada</h3>
+        <p>Equipe treinada em planejamento patrimonial. Formamos especialistas, não apenas vendedores de consórcio.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ FUNDADOR ============ -->
+<section class="sec dark" data-screen-label="Fundador">
+  <div class="wrap">
+    <div class="founder">
+      <div class="img-frame reveal">
+        <image-slot id="founder" class="founder-img" shape="rect" fit="cover"
+          src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&w=800&q=80"
+          placeholder="Foto do sócio / consultor"></image-slot>
+      </div>
+      <div class="reveal">
+        <div class="eyebrow on-dark">A frente da operação</div>
+        <div class="founder-q">“A maioria das pessoas passa a vida trabalhando para construir patrimônio. <em>Poucas constroem uma estratégia para isso.</em>”</div>
+        <p style="font-size:16px;color:rgba(255,255,255,.62);line-height:1.75;margin-bottom:34px;max-width:520px;">À frente da AMV Patrimônio como Diretor Comercial e Consultor Patrimonial, conduzindo o atendimento dos principais clientes da base AMV e o relacionamento com parceiros estratégicos.</p>
+        <div class="founder-by">
+          <span class="ln"></span>
+          <div>
+            <div class="nm">André Luiz Souza</div>
+            <div class="rl">Sócio · Diretor Comercial e Consultor Patrimonial</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ CTA ============ -->
+<section class="cta" id="diagnostico" data-screen-label="CTA">
+  <div class="wrap cta-in reveal">
+    <div class="eyebrow on-dark center">Próximo passo</div>
+    <h2>O próximo passo não é<br>contratar uma cota.<br><em>É construir a estratégia certa.</em></h2>
+    <p>Realize seu Diagnóstico Patrimonial e descubra qual estratégia faz sentido para o seu momento, perfil e objetivos.</p>
+    <div class="cta-actions">
+      <a href="#" class="btn btn-gold">Agendar Diagnóstico Patrimonial <span class="arr">→</span></a>
+      <a href="#" class="btn btn-ghost">Falar com um consultor</a>
+    </div>
+  </div>
+</section>
+
+<!-- ============ FOOTER ============ -->
+<footer class="foot">
+  <div class="wrap">
+    <div class="foot-top">
+      <div class="foot-brand">
+        <div class="lock" style="--gap:16px;">
+          <svg class="mark" style="color:var(--ouro)" width="34" height="45"><use href="#m-diamond"/></svg>
+          <div class="wm wm-on-dark" style="--amv:24px;--pat:7.5px;"><span class="amv">AMV</span><span class="pat">Patrimônio</span></div>
+        </div>
+        <p>Consultoria patrimonial estratégica. Ajudamos pessoas e empresas a construir, proteger e ampliar patrimônio com visão de longo prazo.</p>
+      </div>
+      <div class="foot-col">
+        <h5>Navegação</h5>
+        <a href="#posicionamento">A Consultoria</a>
+        <a href="#metodo">Método LAR</a>
+        <a href="#pilares">Estratégia</a>
+        <a href="#caminhos">Caminhos</a>
+        <a href="#processo">Como Funciona</a>
+      </div>
+      <div class="foot-col">
+        <h5>Contato</h5>
+        <p>(61) 99956-6110</p>
+        <p>contato@amvpatrimonio.com.br</p>
+        <p>www.amvpatrimonio.com.br</p>
+        <p>@amvpatrimonio</p>
+      </div>
+      <div class="foot-col">
+        <h5>Grupo AMV</h5>
+        <p>10+ anos de mercado</p>
+        <p>1.100+ clientes ativos</p>
+        <p>Consultoria · Saúde · Patrimônio</p>
+      </div>
+    </div>
+    <div class="foot-bot">
+      <span>© 2026 AMV Patrimônio · Grupo AMV. Todos os direitos reservados.</span>
+      <span class="legal">Os exemplos e cenários apresentados são ilustrativos. Os resultados dependem da estratégia, contemplações, mercado e execução ao longo do tempo.</span>
+    </div>
+  </div>
+</footer>
+
+<script>
+// nav shadow on scroll
+const nav = document.getElementById('nav');
+const onScroll = () => nav.classList.toggle('scrolled', window.scrollY > 40);
+window.addEventListener('scroll', onScroll, {passive:true});
+onScroll();
+
+// mobile menu toggle
+const burger = document.getElementById('burger');
+const navLinks = document.querySelector('.nav-links');
+if (burger && navLinks) {
+  burger.addEventListener('click', () => navLinks.classList.toggle('open'));
+  navLinks.querySelectorAll('a').forEach(a => a.addEventListener('click', () => navLinks.classList.remove('open')));
+}
+
+// reveal on scroll
+const io = new IntersectionObserver((entries) => {
+  entries.forEach(e => { if(e.isIntersecting){ e.target.classList.add('in'); io.unobserve(e.target); } });
+}, {threshold:0.12, rootMargin:'0px 0px -8% 0px'});
+document.querySelectorAll('.reveal').forEach(el => io.observe(el));
+
+// animated counters
+const fmt = (n) => n.toLocaleString('pt-BR');
+const animateCount = (el) => {
+  const to = parseFloat(el.dataset.to);
+  const suffix = el.dataset.suffix || '';
+  const dur = 1400, t0 = performance.now();
+  const tick = (t) => {
+    const p = Math.min((t - t0) / dur, 1);
+    const eased = 1 - Math.pow(1 - p, 3);
+    const cur = to < 100 ? (to * eased).toFixed(1).replace(/\.0$/, '') : Math.round(to * eased);
+    el.textContent = (typeof cur === 'string' ? cur : fmt(cur)) + suffix;
+    if (p < 1) requestAnimationFrame(tick);
+    else el.textContent = (to < 100 ? to : fmt(to)) + suffix;
+  };
+  requestAnimationFrame(tick);
+};
+const cio = new IntersectionObserver((entries) => {
+  entries.forEach(e => { if (e.isIntersecting) { animateCount(e.target); cio.unobserve(e.target); } });
+}, {threshold:0.5});
+document.querySelectorAll('.count').forEach(el => cio.observe(el));
+
+// When bundled offline, window.__resources holds blob URLs for each photo —
+// override the slot src so images render with no network. Online (source) the
+// original Unsplash src remains the fallback.
+(function () {
+  var R = window.__resources;
+  if (!R) return;
+  ['hero','step1','step2','step3','case1','case2','case3','tst1','tst2','tst3','founder'].forEach(function (id) {
+    var url = R[id], el = document.getElementById(id);
+    if (url && el) el.setAttribute('src', url);
+  });
+})();
+</script>
+
+</body>
+</html>

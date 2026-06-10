@@ -1,0 +1,651 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>AMV Patrimônio — Manual da Marca</title>
+<link rel="stylesheet" href="assets/amv.css">
+</head>
+<body>
+
+<!-- ============ REUSABLE MARKS (currentColor) ============ -->
+<svg width="0" height="0" style="position:absolute" aria-hidden="true">
+  <defs>
+    <!-- Diamante (Losango AMV) -->
+    <symbol id="m-diamond" viewBox="0 0 72 96">
+      <path d="M36 4 L66 48 L36 92 L6 48 Z" fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/>
+      <path d="M6 48 H66" stroke="currentColor" stroke-width="1" stroke-opacity=".55"/>
+      <path d="M36 4 L22 48 L36 92" fill="none" stroke="currentColor" stroke-width="1" stroke-opacity=".5" stroke-linejoin="round"/>
+      <path d="M36 4 L50 48 L36 92" fill="none" stroke="currentColor" stroke-width="1" stroke-opacity=".5" stroke-linejoin="round"/>
+    </symbol>
+    <!-- Diamante sólido (favicon) -->
+    <symbol id="m-diamond-solid" viewBox="0 0 72 96">
+      <path d="M36 4 L66 48 L36 92 L6 48 Z" fill="currentColor"/>
+      <path d="M36 16 L22 48 L36 80 L50 48 Z" fill="#0D1B2A" fill-opacity=".22"/>
+      <path d="M6 48 H66" stroke="#0D1B2A" stroke-width="1.4" stroke-opacity=".25"/>
+    </symbol>
+    <!-- Vértice -->
+    <symbol id="m-vertice" viewBox="0 0 86 80">
+      <path d="M10 70 L43 12 L76 70" fill="none" stroke="currentColor" stroke-width="3" stroke-linejoin="round"/>
+      <path d="M24 70 L43 36 L62 70" fill="none" stroke="currentColor" stroke-width="2.1" stroke-linejoin="round" stroke-opacity=".62"/>
+    </symbol>
+    <!-- Monograma A em selo -->
+    <symbol id="m-hex" viewBox="0 0 76 76">
+      <polygon points="38,5 67,21 67,55 38,71 9,55 9,21" fill="none" stroke="currentColor" stroke-width="2"/>
+      <path d="M27 53 L38 23 L49 53 M31.4 44.5 H44.6" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linejoin="round"/>
+    </symbol>
+  </defs>
+</svg>
+
+<!-- ============ STICKY NAV ============ -->
+<div class="topbar">
+  <div class="topbar-in">
+    <div class="brand">AMV <b>PATRIMÔNIO</b></div>
+    <nav>
+      <a href="#logo">Logo</a>
+      <a href="#versoes">Versões</a>
+      <a href="#cor">Cor</a>
+      <a href="#tipografia">Tipografia</a>
+      <a href="#aplicacoes">Aplicações</a>
+    </nav>
+  </div>
+</div>
+
+<!-- ============ COVER ============ -->
+<header class="cover" data-screen-label="Capa">
+  <div class="cover-top">
+    <div class="cover-kicker">Grupo AMV · Consultoria Patrimonial</div>
+    <div class="cover-tag">Manual da Marca · v1</div>
+  </div>
+
+  <div class="cover-mid">
+    <div class="lock" style="--gap:26px;">
+      <svg class="mark" style="color:var(--ouro)" width="70" height="93"><use href="#m-diamond"/></svg>
+      <div class="wm wm-on-dark" style="--amv:40px;--pat:13px;">
+        <span class="amv">AMV</span>
+        <span class="pat">Patrimônio</span>
+      </div>
+    </div>
+    <h1>Manual<br>da <em>Marca</em></h1>
+    <p class="cover-sub">A identidade visual da AMV Patrimônio — princípios, elementos e aplicações para uma consultoria patrimonial premium, séria e humana.</p>
+  </div>
+
+  <div class="cover-bot">
+    <span>Identidade Visual · Fase 1</span>
+    <span>Junho 2026 · Documento de Marca</span>
+  </div>
+</header>
+
+<!-- ============ A MARCA ============ -->
+<section class="section" id="marca">
+  <div class="wrap">
+    <div class="s-head">
+      <div class="eyebrow">01 — A Marca</div>
+      <h2 class="s-title">Não vendemos cotas.<br>Construímos patrimônio.</h2>
+    </div>
+    <div style="display:grid;grid-template-columns:1fr 1fr;gap:56px;align-items:start;">
+      <p style="font-family:var(--serif);font-size:25px;line-height:1.5;color:var(--navy);font-weight:500;">
+        A AMV Patrimônio é uma <em style="color:var(--ouro-d)">consultoria patrimonial estratégica</em> — não uma vendedora de consórcios. Cada elemento desta identidade existe para transmitir credibilidade, inteligência e uma relação de longo prazo.
+      </p>
+      <div style="display:flex;flex-direction:column;gap:22px;padding-top:6px;">
+        <p style="font-size:15.5px;color:var(--cinza);">Respaldada por mais de 10 anos do Grupo AMV e uma base de 1.100+ clientes ativos, a marca equilibra dois territórios que raramente convivem: o <b style="color:var(--navy);font-weight:600;">premium sóbrio</b> do mercado financeiro de alto valor e a <b style="color:var(--navy);font-weight:600;">proximidade humana</b> de quem aconselha, não apenas vende.</p>
+        <div style="display:flex;gap:14px;flex-wrap:wrap;margin-top:4px;">
+          <span style="font-size:12px;letter-spacing:1px;color:var(--navy);border:1px solid var(--line);padding:8px 16px;border-radius:30px;">Credibilidade</span>
+          <span style="font-size:12px;letter-spacing:1px;color:var(--navy);border:1px solid var(--line);padding:8px 16px;border-radius:30px;">Estratégia</span>
+          <span style="font-size:12px;letter-spacing:1px;color:var(--navy);border:1px solid var(--line);padding:8px 16px;border-radius:30px;">Solidez</span>
+          <span style="font-size:12px;letter-spacing:1px;color:var(--navy);border:1px solid var(--line);padding:8px 16px;border-radius:30px;">Longo prazo</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ LOGO PRINCIPAL ============ -->
+<section class="section" id="logo">
+  <div class="wrap">
+    <div class="s-head">
+      <div class="eyebrow">02 — Assinatura Principal</div>
+      <h2 class="s-title">O logotipo</h2>
+      <p class="s-lead">A assinatura horizontal é a aplicação preferencial da marca. O símbolo do losango representa o patrimônio — valor guardado e lapidado — e encerra as iniciais <b style="color:var(--navy)">A</b> e <b style="color:var(--navy)">V</b> em suas faces opostas.</p>
+    </div>
+
+    <div class="showcase">
+      <span class="corner tl"></span>
+      <span class="corner br"></span>
+      <div class="lock" style="--gap:34px;">
+        <svg class="mark" style="color:var(--ouro)" width="104" height="138"><use href="#m-diamond"/></svg>
+        <div class="wm wm-on-dark" style="--amv:58px;--pat:18px;">
+          <span class="amv">AMV</span>
+          <span class="pat">Patrimônio</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ CONCEITO ============ -->
+<section class="section" style="background:var(--off);">
+  <div class="wrap">
+    <div class="s-head">
+      <div class="eyebrow">03 — Conceito do Símbolo</div>
+      <h2 class="s-title">Um losango que guarda valor</h2>
+    </div>
+    <div class="concept-grid">
+      <div class="concept-art">
+        <svg class="mark" style="color:var(--ouro)" width="150" height="200"><use href="#m-diamond"/></svg>
+      </div>
+      <div class="concept-list">
+        <div class="concept-item">
+          <span class="concept-num">A</span>
+          <div><h4>A face superior é o "A"</h4><p>O vértice ascendente forma a inicial de AMV e aponta para o alto — crescimento e construção patrimonial.</p></div>
+        </div>
+        <div class="concept-item">
+          <span class="concept-num">V</span>
+          <div><h4>A face inferior é o "V"</h4><p>O vértice descendente fecha o losango. Juntos, A e V formam a gema — metáfora do valor lapidado e protegido.</p></div>
+        </div>
+        <div class="concept-item">
+          <span class="concept-num">◆</span>
+          <div><h4>O losango é o patrimônio</h4><p>Forma de gema e de pedra fundamental: solidez, raridade e algo que se constrói com método e se preserva no tempo.</p></div>
+        </div>
+        <div class="concept-item">
+          <span class="concept-num">≡</span>
+          <div><h4>As facetas internas</h4><p>Linhas de lapidação que dão profundidade e sofisticação, evocando precisão e a estrutura do Método LAR.</p></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ VARIAÇÕES DE ASSINATURA ============ -->
+<section class="section" id="versoes">
+  <div class="wrap">
+    <div class="s-head">
+      <div class="eyebrow">04 — Variações de Assinatura</div>
+      <h2 class="s-title">Horizontal, vertical e símbolo</h2>
+      <p class="s-lead">Três construções para diferentes contextos de aplicação. Use a horizontal por padrão; a vertical em formatos quadrados; o símbolo isolado em ícones, selos e espaços reduzidos.</p>
+    </div>
+
+    <div class="var-grid">
+      <div class="var-card">
+        <div class="var-stage dark">
+          <div class="lock" style="--gap:20px;">
+            <svg class="mark" style="color:var(--ouro)" width="52" height="69"><use href="#m-diamond"/></svg>
+            <div class="wm wm-on-dark" style="--amv:30px;--pat:9.5px;"><span class="amv">AMV</span><span class="pat">Patrimônio</span></div>
+          </div>
+        </div>
+        <div class="var-foot"><div class="vn">Horizontal</div><div class="vd">Aplicação preferencial</div></div>
+      </div>
+
+      <div class="var-card">
+        <div class="var-stage dark">
+          <div class="lockv">
+            <svg class="mark" style="color:var(--ouro)" width="56" height="74"><use href="#m-diamond"/></svg>
+            <div class="wm wm-on-dark center" style="--amv:26px;--pat:8.5px;"><span class="amv">AMV</span><span class="pat">Patrimônio</span></div>
+          </div>
+        </div>
+        <div class="var-foot"><div class="vn">Vertical</div><div class="vd">Formatos quadrados e centralizados</div></div>
+      </div>
+
+      <div class="var-card">
+        <div class="var-stage dark">
+          <svg class="mark" style="color:var(--ouro)" width="74" height="98"><use href="#m-diamond"/></svg>
+        </div>
+        <div class="var-foot"><div class="vn">Símbolo isolado</div><div class="vd">Ícone, selo, avatar, favicon</div></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ VERSÕES CROMÁTICAS ============ -->
+<section class="section tight" style="background:var(--off);">
+  <div class="wrap">
+    <div class="s-head">
+      <div class="eyebrow">05 — Versões Cromáticas</div>
+      <h2 class="s-title">Positiva, negativa, mono e reduzida</h2>
+    </div>
+    <div class="ver-grid">
+      <div class="ver-card">
+        <div class="ver-stage" style="background:var(--navy);">
+          <div class="lockv">
+            <svg class="mark" style="color:var(--ouro)" width="44" height="58"><use href="#m-diamond"/></svg>
+            <div class="wm wm-on-dark center" style="--amv:18px;--pat:6.5px;"><span class="amv">AMV</span><span class="pat">Patrimônio</span></div>
+          </div>
+        </div>
+        <div class="ver-foot"><div class="vn">Positiva</div><div class="vd">Ouro sobre fundo navy — preferencial</div></div>
+      </div>
+
+      <div class="ver-card">
+        <div class="ver-stage" style="background:var(--off);">
+          <div class="lockv">
+            <svg class="mark" style="color:var(--ouro-d)" width="44" height="58"><use href="#m-diamond"/></svg>
+            <div class="wm wm-on-light center" style="--amv:18px;--pat:6.5px;"><span class="amv">AMV</span><span class="pat">Patrimônio</span></div>
+          </div>
+        </div>
+        <div class="ver-foot"><div class="vn">Negativa</div><div class="vd">Navy + ouro sobre fundo claro</div></div>
+      </div>
+
+      <div class="ver-card">
+        <div class="ver-stage" style="background:#fff;">
+          <div class="lockv">
+            <svg class="mark" style="color:var(--navy)" width="44" height="58"><use href="#m-diamond"/></svg>
+            <div class="wm wm-mono-dark center" style="--amv:18px;--pat:6.5px;"><span class="amv">AMV</span><span class="pat">Patrimônio</span></div>
+          </div>
+        </div>
+        <div class="ver-foot"><div class="vn">Monocromática</div><div class="vd">Navy sólido — uso em P&B</div></div>
+      </div>
+
+      <div class="ver-card">
+        <div class="ver-stage" style="background:var(--navy);">
+          <div style="width:72px;height:72px;border-radius:16px;background:linear-gradient(150deg,#16293f,#0D1B2A);display:flex;align-items:center;justify-content:center;box-shadow:inset 0 0 0 1px rgba(201,168,76,.25);">
+            <svg style="color:var(--ouro)" width="38" height="51"><use href="#m-diamond-solid"/></svg>
+          </div>
+        </div>
+        <div class="ver-foot"><div class="vn">Favicon / Reduzida</div><div class="vd">Símbolo sólido em app icon</div></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ ÁREA DE PROTEÇÃO ============ -->
+<section class="section">
+  <div class="wrap">
+    <div class="s-head">
+      <div class="eyebrow">06 — Construção e Proteção</div>
+      <h2 class="s-title">Espaçamento e redução mínima</h2>
+      <p class="s-lead">A zona de proteção equivale à altura do símbolo (1×) em todos os lados. Nada — texto, imagem ou outro logo — deve invadir essa margem.</p>
+    </div>
+    <div class="protect-grid">
+      <div class="protect-box">
+        <!-- clearspace illustration -->
+        <div style="position:relative;padding:64px;outline:1px dashed var(--ouro);outline-offset:0;">
+          <span style="position:absolute;top:6px;left:50%;transform:translateX(-50%);font-size:10px;color:var(--ouro-d);letter-spacing:1px;">1×</span>
+          <span style="position:absolute;bottom:6px;left:50%;transform:translateX(-50%);font-size:10px;color:var(--ouro-d);letter-spacing:1px;">1×</span>
+          <span style="position:absolute;left:8px;top:50%;transform:translateY(-50%);font-size:10px;color:var(--ouro-d);">1×</span>
+          <span style="position:absolute;right:8px;top:50%;transform:translateY(-50%);font-size:10px;color:var(--ouro-d);">1×</span>
+          <div class="lock" style="--gap:22px;">
+            <svg class="mark" style="color:var(--navy)" width="58" height="77"><use href="#m-diamond"/></svg>
+            <div class="wm wm-mono-dark" style="--amv:32px;--pat:10px;"><span class="amv">AMV</span><span class="pat">Patrimônio</span></div>
+          </div>
+        </div>
+      </div>
+      <div class="minsize">
+        <div class="minsize-row">
+          <div class="lock" style="--gap:14px;">
+            <svg class="mark" style="color:var(--navy)" width="34" height="45"><use href="#m-diamond"/></svg>
+            <div class="wm wm-mono-dark" style="--amv:19px;--pat:6px;"><span class="amv">AMV</span><span class="pat">Patrimônio</span></div>
+          </div>
+          <div class="lbl"><b>Digital — 120 px</b>largura mínima da assinatura horizontal em tela</div>
+        </div>
+        <div style="height:1px;background:var(--line);"></div>
+        <div class="minsize-row">
+          <div class="lock" style="--gap:11px;">
+            <svg class="mark" style="color:var(--navy)" width="26" height="35"><use href="#m-diamond"/></svg>
+            <div class="wm wm-mono-dark" style="--amv:15px;--pat:5px;"><span class="amv">AMV</span><span class="pat">Patrimônio</span></div>
+          </div>
+          <div class="lbl"><b>Impresso — 25 mm</b>largura mínima para garantir legibilidade</div>
+        </div>
+        <div style="height:1px;background:var(--line);"></div>
+        <div class="minsize-row">
+          <svg class="mark" style="color:var(--navy)" width="22" height="29"><use href="#m-diamond"/></svg>
+          <div class="lbl"><b>Símbolo — 16 px</b>tamanho mínimo do losango isolado (favicon)</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ USOS INCORRETOS ============ -->
+<section class="section tight" style="background:var(--off);">
+  <div class="wrap">
+    <div class="s-head">
+      <div class="eyebrow">07 — Usos Incorretos</div>
+      <h2 class="s-title">O que nunca fazer</h2>
+    </div>
+    <div class="misuse-grid">
+      <div class="misuse">
+        <div class="misuse-stage"><span class="misuse-x">✕</span>
+          <div class="lock" style="--gap:14px;transform:rotate(-12deg);">
+            <svg class="mark" style="color:var(--ouro)" width="30" height="40"><use href="#m-diamond"/></svg>
+            <div class="wm wm-mono-dark" style="--amv:16px;--pat:5px;"><span class="amv">AMV</span><span class="pat">Patrimônio</span></div>
+          </div>
+        </div>
+        <div class="misuse-cap">Não girar ou inclinar a marca</div>
+      </div>
+      <div class="misuse">
+        <div class="misuse-stage"><span class="misuse-x">✕</span>
+          <div class="lock" style="--gap:14px;">
+            <svg class="mark" style="color:#C0392B" width="30" height="40"><use href="#m-diamond"/></svg>
+            <div class="wm" style="--amv:16px;--pat:5px;"><span class="amv" style="color:#1E8449">AMV</span><span class="pat" style="color:#8E44AD">Patrimônio</span></div>
+          </div>
+        </div>
+        <div class="misuse-cap">Não usar cores fora da paleta</div>
+      </div>
+      <div class="misuse">
+        <div class="misuse-stage"><span class="misuse-x">✕</span>
+          <div class="lock" style="--gap:14px;">
+            <svg class="mark" style="color:var(--navy)" width="30" height="40"><use href="#m-diamond"/></svg>
+            <div class="wm wm-mono-dark" style="--amv:16px;--pat:5px;transform:scaleX(1.7);"><span class="amv">AMV</span><span class="pat">Patrimônio</span></div>
+          </div>
+        </div>
+        <div class="misuse-cap">Não distorcer as proporções</div>
+      </div>
+      <div class="misuse">
+        <div class="misuse-stage" style="background:linear-gradient(120deg,#7d5fff,#ff6b9d);"><span class="misuse-x">✕</span>
+          <div class="lock" style="--gap:14px;">
+            <svg class="mark" style="color:var(--ouro)" width="30" height="40"><use href="#m-diamond"/></svg>
+            <div class="wm wm-mono-light" style="--amv:16px;--pat:5px;"><span class="amv">AMV</span><span class="pat">Patrimônio</span></div>
+          </div>
+        </div>
+        <div class="misuse-cap">Não aplicar sobre fundos ruidosos</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ PALETA ============ -->
+<section class="section" id="cor" style="background:var(--off);">
+  <div class="wrap">
+    <div class="s-head">
+      <div class="eyebrow">08 — Identidade Cromática</div>
+      <h2 class="s-title">Paleta de cores oficial</h2>
+      <p class="s-lead">Códigos para tela (RGB / HEX) e impressão (CMYK). O navy e o ouro são as cores primárias; off-white e grafite estruturam o restante.</p>
+    </div>
+
+    <div class="pal-grid">
+      <div class="sw">
+        <div class="sw-color" style="background:#0D1B2A;"><span class="sw-badge" style="background:rgba(201,168,76,.92);color:#0D1B2A;">Primária</span></div>
+        <div class="sw-info">
+          <div class="sw-name">Navy Profundo</div>
+          <div class="sw-row"><span>HEX</span><span>#0D1B2A</span></div>
+          <div class="sw-row"><span>RGB</span><span>13 · 27 · 42</span></div>
+          <div class="sw-row"><span>CMYK</span><span>69 · 36 · 0 · 84</span></div>
+        </div>
+      </div>
+      <div class="sw">
+        <div class="sw-color" style="background:#C9A84C;"><span class="sw-badge" style="background:rgba(13,27,42,.28);color:#fff;">Primária</span></div>
+        <div class="sw-info">
+          <div class="sw-name">Ouro AMV</div>
+          <div class="sw-row"><span>HEX</span><span>#C9A84C</span></div>
+          <div class="sw-row"><span>RGB</span><span>201 · 168 · 76</span></div>
+          <div class="sw-row"><span>CMYK</span><span>0 · 16 · 62 · 21</span></div>
+        </div>
+      </div>
+      <div class="sw">
+        <div class="sw-color" style="background:#1A2F47;"><span class="sw-badge" style="background:rgba(255,255,255,.16);color:#fff;">Secundária</span></div>
+        <div class="sw-info">
+          <div class="sw-name">Navy Médio</div>
+          <div class="sw-row"><span>HEX</span><span>#1A2F47</span></div>
+          <div class="sw-row"><span>RGB</span><span>26 · 47 · 71</span></div>
+          <div class="sw-row"><span>CMYK</span><span>63 · 34 · 0 · 72</span></div>
+        </div>
+      </div>
+      <div class="sw">
+        <div class="sw-color" style="background:#E2C97E;"><span class="sw-badge" style="background:rgba(13,27,42,.22);color:#fff;">Apoio</span></div>
+        <div class="sw-info">
+          <div class="sw-name">Ouro Champagne</div>
+          <div class="sw-row"><span>HEX</span><span>#E2C97E</span></div>
+          <div class="sw-row"><span>RGB</span><span>226 · 201 · 126</span></div>
+          <div class="sw-row"><span>CMYK</span><span>0 · 11 · 44 · 11</span></div>
+        </div>
+      </div>
+      <div class="sw">
+        <div class="sw-color" style="background:#9E7A2A;"><span class="sw-badge" style="background:rgba(255,255,255,.18);color:#fff;">Apoio</span></div>
+        <div class="sw-info">
+          <div class="sw-name">Ouro Profundo</div>
+          <div class="sw-row"><span>HEX</span><span>#9E7A2A</span></div>
+          <div class="sw-row"><span>RGB</span><span>158 · 122 · 42</span></div>
+          <div class="sw-row"><span>CMYK</span><span>0 · 23 · 73 · 38</span></div>
+        </div>
+      </div>
+      <div class="sw">
+        <div class="sw-color" style="background:#F7F4EF;border-bottom:1px solid #E5E0D8;"><span class="sw-badge" style="background:rgba(13,27,42,.08);color:#555;">Neutro</span></div>
+        <div class="sw-info">
+          <div class="sw-name">Off-White Marfim</div>
+          <div class="sw-row"><span>HEX</span><span>#F7F4EF</span></div>
+          <div class="sw-row"><span>RGB</span><span>247 · 244 · 239</span></div>
+          <div class="sw-row"><span>CMYK</span><span>0 · 1 · 3 · 3</span></div>
+        </div>
+      </div>
+      <div class="sw">
+        <div class="sw-color" style="background:#2E2E2E;"><span class="sw-badge" style="background:rgba(255,255,255,.16);color:#fff;">Neutro</span></div>
+        <div class="sw-info">
+          <div class="sw-name">Grafite</div>
+          <div class="sw-row"><span>HEX</span><span>#2E2E2E</span></div>
+          <div class="sw-row"><span>RGB</span><span>46 · 46 · 46</span></div>
+          <div class="sw-row"><span>CMYK</span><span>0 · 0 · 0 · 82</span></div>
+        </div>
+      </div>
+      <div class="sw">
+        <div class="sw-color" style="background:#6B6B6B;"><span class="sw-badge" style="background:rgba(255,255,255,.16);color:#fff;">Neutro</span></div>
+        <div class="sw-info">
+          <div class="sw-name">Cinza Texto</div>
+          <div class="sw-row"><span>HEX</span><span>#6B6B6B</span></div>
+          <div class="sw-row"><span>RGB</span><span>107 · 107 · 107</span></div>
+          <div class="sw-row"><span>CMYK</span><span>0 · 0 · 0 · 58</span></div>
+        </div>
+      </div>
+    </div>
+
+    <div class="grad-grid">
+      <div><div class="grad" style="background:linear-gradient(135deg,#0D1B2A,#2C4A6E);"></div><div class="grad-lbl"><b>Navy Profundo → Navy Light</b>Fundos de capa e seções escuras</div></div>
+      <div><div class="grad" style="background:linear-gradient(135deg,#9E7A2A,#E2C97E);"></div><div class="grad-lbl"><b>Ouro Profundo → Champagne</b>Detalhes, barras e acentos premium</div></div>
+      <div><div class="grad" style="background:linear-gradient(160deg,#0D1B2A 62%,#1A2F47 100%);border-right:3px solid #C9A84C;"></div><div class="grad-lbl"><b>Navy + borda Ouro</b>Combinação padrão dos slides</div></div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ TIPOGRAFIA ============ -->
+<section class="section" id="tipografia">
+  <div class="wrap">
+    <div class="s-head">
+      <div class="eyebrow">09 — Sistema Tipográfico</div>
+      <h2 class="s-title">Tipografia</h2>
+      <p class="s-lead">Uma serifada editorial para títulos e momentos de marca; uma sans-serif neutra para texto e interface. Ambas gratuitas (Google Fonts) e de ampla compatibilidade.</p>
+    </div>
+
+    <div class="type-grid">
+      <div class="type-card">
+        <div class="tl">Primária · Títulos & Destaques</div>
+        <div class="type-spec-serif">Playfair Display</div>
+        <div style="font-family:var(--serif);font-style:italic;font-size:19px;color:var(--ouro-d);margin-bottom:20px;">Construir, proteger e ampliar.</div>
+        <div class="type-glyphs" style="font-family:var(--serif)">AÁBCDEÉFGHIJKLMNOPQRSTUÔVWXYZ&nbsp;·&nbsp;1234567890</div>
+        <div class="type-meta"><b>Uso:</b> logotipo, títulos de seção, capas, números e citações editoriais.
+        <div class="weights">
+          <span style="font-family:var(--serif);font-weight:400;">Regular</span>
+          <span style="font-family:var(--serif);font-weight:600;">SemiBold</span>
+          <span style="font-family:var(--serif);font-weight:700;">Bold</span>
+          <span style="font-family:var(--serif);font-style:italic;">Italic</span>
+        </div></div>
+      </div>
+
+      <div class="type-card">
+        <div class="tl">Secundária · Texto & Interface</div>
+        <div class="type-spec-sans">Inter</div>
+        <div style="font-family:var(--sans);font-size:15px;color:var(--cinza);line-height:1.7;margin-bottom:20px;">Consultoria patrimonial estratégica para pessoas e empresas que buscam crescimento com segurança e visão de longo prazo.</div>
+        <div class="type-glyphs">AÁBCDEÉFGHIJKLMNOPQRSTUÔVWXYZ&nbsp;·&nbsp;1234567890</div>
+        <div class="type-meta"><b>Uso:</b> corpo de texto, legendas, labels, dados, interface e apresentações.
+        <div class="weights">
+          <span style="font-weight:300;">Light</span>
+          <span style="font-weight:400;">Regular</span>
+          <span style="font-weight:500;">Medium</span>
+          <span style="font-weight:600;">SemiBold</span>
+        </div></div>
+      </div>
+    </div>
+
+    <div class="hier">
+      <div class="hier-row"><div class="hier-meta"><b>H1 · Capa / Título</b>Playfair · 700</div><div class="hh1">Patrimônio com método</div></div>
+      <div class="hier-row"><div class="hier-meta"><b>H2 · Seção</b>Playfair · 600</div><div class="hh2">Método LAR</div></div>
+      <div class="hier-row"><div class="hier-meta"><b>H3 · Subseção</b>Inter · 600 · caixa alta</div><div class="hh3">Estratégia de Crescimento</div></div>
+      <div class="hier-row"><div class="hier-meta"><b>H4 · Label / Tag</b>Inter · 600 · tracking</div><div class="hh4">01 — Consultoria Patrimonial</div></div>
+      <div class="hier-row"><div class="hier-meta"><b>Corpo</b>Inter · 400</div><div class="hbody">Ajudamos pessoas e empresas a construir, proteger e ampliar patrimônio com estratégia, segurança e visão de longo prazo, usando o consórcio como ferramenta inteligente.</div></div>
+      <div class="hier-row"><div class="hier-meta"><b>Legenda</b>Inter · 400 · 12px</div><div class="hcap">Fonte: ABAC — Sistema de Consórcios 2025 · Dados consolidados</div></div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ ELEMENTOS GRÁFICOS ============ -->
+<section class="section tight" style="background:var(--off);">
+  <div class="wrap">
+    <div class="s-head">
+      <div class="eyebrow">10 — Elementos de Suporte</div>
+      <h2 class="s-title">Elementos gráficos</h2>
+    </div>
+    <div class="el-grid">
+      <div class="el-card">
+        <div class="el-prev"><div class="gold-divider"></div></div>
+        <div class="el-name">Linha divisória</div>
+        <div class="el-desc">Degradê ouro → transparente. Separa seções com elegância.</div>
+      </div>
+      <div class="el-card">
+        <div class="el-prev"><div style="display:flex;gap:10px;"><div class="corner-mark"></div><div class="corner-mark" style="border-top:none;border-left:none;border-right:2px solid var(--ouro);border-bottom:2px solid var(--ouro);"></div></div></div>
+        <div class="el-name">Marcadores de canto</div>
+        <div class="el-desc">Cantos em ouro para molduras e destaques.</div>
+      </div>
+      <div class="el-card">
+        <div class="el-prev"><div class="accent-bar"></div></div>
+        <div class="el-name">Barra de acento</div>
+        <div class="el-desc">Barra vertical ouro. Destaque lateral em citações.</div>
+      </div>
+      <div class="el-card">
+        <div class="el-prev"><div style="font-family:var(--serif);font-size:90px;color:var(--ouro);opacity:.22;line-height:.6;">&rdquo;</div></div>
+        <div class="el-name">Aspas editoriais</div>
+        <div class="el-desc">Playfair em ouro translúcido. Depoimentos e citações.</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ APLICAÇÕES ============ -->
+<section class="section" id="aplicacoes">
+  <div class="wrap">
+    <div class="s-head">
+      <div class="eyebrow">11 — Aplicações</div>
+      <h2 class="s-title">A marca aplicada</h2>
+      <p class="s-lead">Mockups de referência da papelaria institucional. Todos os campos de contato são editáveis — substitua os placeholders pelos dados oficiais.</p>
+    </div>
+
+    <!-- Cartão de visita -->
+    <div class="app-block">
+      <div class="app-head"><span class="an">Cartão de Visita</span><span class="ad">— 85 × 55 mm · frente e verso · acabamento fosco com verniz localizado no símbolo</span></div>
+      <div class="bc-pair">
+        <div class="bc bc-front">
+          <span class="bc-corner"></span>
+          <div class="lock" style="--gap:16px;">
+            <svg class="mark" style="color:var(--ouro)" width="40" height="53"><use href="#m-diamond"/></svg>
+            <div class="wm wm-on-dark" style="--amv:21px;--pat:7px;"><span class="amv">AMV</span><span class="pat">Patrimônio</span></div>
+          </div>
+          <div>
+            <div class="bc-name">André Luiz Souza</div>
+            <div class="bc-role">Sócio · Consultor Patrimonial</div>
+            <div class="bc-line"></div>
+            <div class="bc-detail">(61) 99956-6110&nbsp;&nbsp;·&nbsp;&nbsp;andre@amvpatrimonio.com.br<br>www.amvpatrimonio.com.br</div>
+          </div>
+        </div>
+        <div class="bc bc-back">
+          <span class="bc-corner bl"></span>
+          <div class="lockv">
+            <svg class="mark" style="color:var(--ouro)" width="58" height="77"><use href="#m-diamond"/></svg>
+            <div class="wm wm-on-dark center" style="--amv:15px;--pat:5.5px;"><span class="amv">AMV</span><span class="pat">Patrimônio</span></div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Papel timbrado + assinatura -->
+    <div class="app-block">
+      <div style="display:grid;grid-template-columns:0.62fr 1fr;gap:48px;align-items:start;">
+        <div>
+          <div class="app-head"><span class="an">Papel Timbrado</span></div>
+          <div class="app-head" style="margin-top:-12px;"><span class="ad">A4 · 210 × 297 mm</span></div>
+          <div class="lh">
+            <div class="lh-head">
+              <div class="lock" style="--gap:14px;">
+                <svg class="mark" style="color:var(--ouro-d)" width="30" height="40"><use href="#m-diamond"/></svg>
+                <div class="wm wm-on-light" style="--amv:17px;--pat:5.5px;"><span class="amv">AMV</span><span class="pat">Patrimônio</span></div>
+              </div>
+              <div class="lh-contact">andre@amvpatrimonio.com.br<br>(61) 99956-6110<br>www.amvpatrimonio.com.br</div>
+            </div>
+            <div class="lh-body">
+              <div class="lh-textline" style="width:38%;background:#E0D9CB;height:11px;"></div>
+              <div style="height:8px;"></div>
+              <div class="lh-textline"></div>
+              <div class="lh-textline" style="width:92%;"></div>
+              <div class="lh-textline" style="width:96%;"></div>
+              <div class="lh-textline" style="width:60%;"></div>
+              <div style="height:10px;"></div>
+              <div class="lh-textline" style="width:88%;"></div>
+              <div class="lh-textline" style="width:94%;"></div>
+              <div class="lh-textline" style="width:44%;"></div>
+              <svg class="mark lh-watermark" style="color:var(--navy)" width="200" height="266"><use href="#m-diamond"/></svg>
+            </div>
+            <div class="lh-foot">
+              <span>AMV Patrimônio · Consultoria Patrimonial Estratégica</span>
+              <span>Grupo AMV</span>
+            </div>
+          </div>
+        </div>
+
+        <div>
+          <div class="app-head"><span class="an">Assinatura de E-mail</span><span class="ad">— HTML responsivo</span></div>
+          <div class="sig">
+            <div class="lockv" style="gap:10px;">
+              <svg class="mark" style="color:var(--ouro-d)" width="46" height="61"><use href="#m-diamond"/></svg>
+              <div class="wm wm-on-light center" style="--amv:13px;--pat:5px;"><span class="amv">AMV</span><span class="pat">Patrimônio</span></div>
+            </div>
+            <div class="sig-divider"></div>
+            <div>
+              <div class="sig-name">André Luiz Souza</div>
+              <div class="sig-role">Sócio · Consultor Patrimonial</div>
+              <div class="sig-detail">
+                <b>T</b>&nbsp; (61) 99956-6110<br>
+                <b>E</b>&nbsp; andre@amvpatrimonio.com.br<br>
+                <b>W</b>&nbsp; www.amvpatrimonio.com.br<br>
+                <b>@</b>&nbsp; @amvpatrimonio
+              </div>
+            </div>
+          </div>
+          <div class="note">
+            <b>Nota.</b> <span>Os campos de nome, cargo e contato são editáveis para cada sócio e colaborador. O bloco de assinatura mantém proporção e cor em qualquer cliente de e-mail.</span>
+          </div>
+
+          <div class="app-head" style="margin-top:48px;"><span class="an">Pasta Institucional</span><span class="ad">— capa · com bolsos internos</span></div>
+          <div style="max-width:340px;">
+            <div class="folder">
+              <div class="folder-ring"></div>
+              <div class="folder-ring two"></div>
+              <div class="lock" style="--gap:18px;position:relative;z-index:2;">
+                <svg class="mark" style="color:var(--ouro)" width="46" height="61"><use href="#m-diamond"/></svg>
+                <div class="wm wm-on-dark" style="--amv:24px;--pat:8px;"><span class="amv">AMV</span><span class="pat">Patrimônio</span></div>
+              </div>
+              <div style="position:relative;z-index:2;">
+                <div style="width:40px;height:2px;background:var(--ouro);margin-bottom:16px;"></div>
+                <div style="font-family:var(--serif);font-size:22px;color:#fff;font-weight:500;line-height:1.35;">Consultoria<br>Patrimonial<br><em style="color:var(--ouro);font-style:italic;">Estratégica</em></div>
+                <div style="font-size:10px;letter-spacing:2.5px;text-transform:uppercase;color:rgba(255,255,255,.45);margin-top:18px;">Grupo AMV · 10+ anos</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ FOOTER ============ -->
+<footer class="foot">
+  <div class="foot-in">
+    <div>
+      <div class="lock" style="--gap:20px;">
+        <svg class="mark" style="color:var(--ouro)" width="42" height="56"><use href="#m-diamond"/></svg>
+        <div class="wm wm-on-dark" style="--amv:24px;--pat:8px;"><span class="amv">AMV</span><span class="pat">Patrimônio</span></div>
+      </div>
+    </div>
+    <div class="foot-r">
+      Manual da Marca · Fase 1<br>
+      Junho 2026 · Uso interno
+    </div>
+  </div>
+</footer>
+
+</body>
+</html>
