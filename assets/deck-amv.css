@@ -103,7 +103,8 @@ em.g{color:var(--ouro-d);font-style:italic;}
 .vrow{display:flex;gap:22px;align-items:flex-start;font-size:25px;line-height:1.45;}
 .vrow .mk{flex-shrink:0;width:14px;height:14px;border:2px solid var(--ouro);transform:rotate(45deg);margin-top:8px;}
 .vrow b{font-weight:600;color:var(--navy);}
-.s.dark .vrow b,.s.deep .vrow b{color:#fff;}
+.s.dark .vrow b,.s.deep .vrow b,.card.gold .vrow b{color:#fff;}
+.card.gold .vrow{color:rgba(255,255,255,.88);}
 
 /* check rows */
 .crow{display:flex;gap:18px;align-items:baseline;font-size:25px;}
