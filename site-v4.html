@@ -105,6 +105,10 @@ image-slot{display:block;background:#dfe3e8;--is-placeholder-color:rgba(13,27,42
 .princ span{font-size:12px;font-weight:600;color:var(--navy);background:#fff;border:1px solid var(--line);padding:7px 14px;border-radius:30px;}
 .video{position:relative;border-radius:10px;overflow:hidden;box-shadow:0 24px 50px -28px rgba(13,27,42,.45);}
 .video image-slot{width:100%;aspect-ratio:16/9;height:auto;}
+.video{cursor:pointer;background:var(--navy);}
+.video video{display:block;width:100%;aspect-ratio:16/9;height:auto;object-fit:cover;background:var(--navy);}
+.video.playing .play{display:none;}
+.qs .video .play{left:auto;top:auto;right:22px;bottom:22px;transform:none;width:58px;height:58px;}
 .play{position:absolute;left:50%;top:50%;transform:translate(-50%,-50%);width:66px;height:66px;border-radius:50%;background:rgba(201,168,76,.95);display:flex;align-items:center;justify-content:center;pointer-events:none;box-shadow:0 10px 30px rgba(0,0,0,.35);}
 .play::after{content:"";border-left:20px solid var(--navy);border-top:12px solid transparent;border-bottom:12px solid transparent;margin-left:5px;}
 
@@ -119,6 +123,8 @@ image-slot{display:block;background:#dfe3e8;--is-placeholder-color:rgba(13,27,42
 .met{display:grid;grid-template-columns:1.25fr 1fr;}
 .met .video{border-radius:0;box-shadow:none;}
 .met .video image-slot{height:100%;aspect-ratio:auto;min-height:400px;}
+.met .video{display:flex;align-items:center;}
+.met .video video{object-fit:contain;}
 .met-panel{background:var(--navy-m);color:#fff;padding:44px 46px;display:flex;flex-direction:column;justify-content:center;}
 .met-panel h3{font-size:22px;font-weight:600;margin-bottom:30px;}
 .met-panel h3 b{color:var(--ouro);font-weight:800;}
@@ -302,7 +308,7 @@ image-slot{display:block;background:#dfe3e8;--is-placeholder-color:rgba(13,27,42
         </div>
       </div>
       <div class="video">
-        <image-slot id="qs-video" shape="rect" fit="cover" placeholder="Arraste a capa do vídeo institucional"></image-slot>
+        <video src="videos/video1-quem-somos.mp4" poster="videos/capa-video1.jpg" preload="metadata" playsinline aria-label="Vídeo institucional AMV Patrimônio"></video>
         <div class="play"></div>
       </div>
     </div>
@@ -335,9 +341,7 @@ image-slot{display:block;background:#dfe3e8;--is-placeholder-color:rgba(13,27,42
 <section id="metodo">
   <div class="met">
     <div class="video">
-      <image-slot id="lar-video" shape="rect" fit="cover"
-        src="https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?auto=format&fit=crop&w=1200&q=80"
-        placeholder="Arraste a capa do vídeo do Método LAR"></image-slot>
+      <video src="videos/video2-metodo-lar.mp4" poster="videos/capa-video2.jpg" preload="metadata" playsinline aria-label="Vídeo do Método LAR"></video>
       <div class="play"></div>
     </div>
     <div class="met-panel">
@@ -492,6 +496,19 @@ const setActive = () => {
 };
 window.addEventListener('scroll', setActive, {passive:true});
 setActive();
+
+// vídeos (Quem Somos e Método LAR): clique na capa toca com som e mostra os controles
+document.querySelectorAll('.video').forEach(box => {
+  const v = box.querySelector('video');
+  if (!v) return;
+  box.addEventListener('click', () => {
+    if (box.classList.contains('playing')) return;
+    box.classList.add('playing');
+    v.controls = true;
+    v.play();
+  });
+  v.addEventListener('ended', () => { box.classList.remove('playing'); v.controls = false; v.load(); });
+});
 
 // animação de entrada
 const io = new IntersectionObserver(es => es.forEach(e => { if (e.isIntersecting) { e.target.classList.add('in'); io.unobserve(e.target); } }), {threshold:.12});
