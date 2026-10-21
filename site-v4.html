@@ -213,6 +213,10 @@ image-slot{display:block;background:#dfe3e8;--is-placeholder-color:rgba(13,27,42
 .dform label.f{display:flex;flex-direction:column;gap:6px;font-size:12.5px;font-weight:700;color:var(--navy);}
 .dform input[type=text],.dform input[type=tel],.dform input[type=email]{font:inherit;font-size:15px;font-weight:500;padding:12px 14px;border:1.5px solid var(--line);border-radius:8px;outline:none;transition:border-color .2s;color:var(--txt);}
 .dform input:focus{border-color:var(--ouro);}
+.dform select{font:inherit;font-size:15px;font-weight:500;padding:12px 40px 12px 14px;border:1.5px solid var(--line);border-radius:8px;outline:none;color:var(--txt);background:#fff url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='8'%3E%3Cpath d='M1 1l5 5 5-5' fill='none' stroke='%239E7A2A' stroke-width='2'/%3E%3C/svg%3E") no-repeat right 14px center;appearance:none;-webkit-appearance:none;cursor:pointer;}
+.dform select:focus{border-color:var(--ouro);}
+.dform select:invalid{color:#9AA0A6;}
+.dform select option{color:var(--txt);}
 .dform .q{font-size:12.5px;font-weight:700;color:var(--navy);margin-bottom:-6px;}
 .opts{display:flex;flex-direction:column;gap:8px;}
 .opt{display:flex;align-items:center;gap:12px;padding:12px 14px;border:1.5px solid var(--line);border-radius:8px;cursor:pointer;font-size:14px;font-weight:600;color:var(--navy);transition:border-color .2s,background .2s;}
@@ -581,6 +585,14 @@ image-slot{display:block;background:#dfe3e8;--is-placeholder-color:rgba(13,27,42
       <label class="f">Nome completo<input type="text" name="nome" autocomplete="name" required></label>
       <label class="f">Telefone / WhatsApp<input type="tel" name="telefone" autocomplete="tel" inputmode="numeric" placeholder="(61) 99999-9999" required></label>
       <label class="f">E-mail<input type="email" name="email" autocomplete="email" placeholder="voce@email.com" required></label>
+      <label class="f">Renda familiar mensal<select name="renda" required>
+        <option value="" disabled selected>Selecione uma faixa</option>
+        <option>Até R$ 5 mil</option>
+        <option>R$ 5 mil a R$ 10 mil</option>
+        <option>R$ 10 mil a R$ 20 mil</option>
+        <option>R$ 20 mil a R$ 50 mil</option>
+        <option>Acima de R$ 50 mil</option>
+      </select></label>
       <div class="q">O que você deseja?</div>
       <div class="opts">
         <label class="opt"><input type="radio" name="interesse" value="Quero comprar um imóvel" required>Quero comprar um imóvel</label>
@@ -663,16 +675,17 @@ dform.addEventListener('submit', async e => {
   if (f.nome.value.trim().length < 3) msg = 'Informe seu nome completo.';
   else if (tel.length < 10) msg = 'Informe um telefone com DDD.';
   else if (!/^[^@\s]+@[^@\s]+\.[^@\s]+$/.test(f.email.value.trim())) msg = 'Informe um e-mail válido.';
+  else if (!f.renda.value) msg = 'Selecione a faixa de renda familiar.';
   else if (!f.interesse.value) msg = 'Escolha o que você deseja.';
   else if (!f.consentimento.checked) msg = 'Marque a autorização de contato para continuar.';
   derr.textContent = msg; derr.style.display = msg ? 'block' : 'none';
   if (msg || f.website.value) return; // website preenchido = robô
   const data = {
     nome: f.nome.value.trim(), telefone: f.telefone.value, email: f.email.value.trim(),
-    interesse: f.interesse.value, origem: location.href.split('#')[0],
+    renda: f.renda.value, interesse: f.interesse.value, origem: location.href.split('#')[0],
     utm_source: utm.get('utm_source') || '', utm_medium: utm.get('utm_medium') || '', utm_campaign: utm.get('utm_campaign') || ''
   };
-  const texto = `Olá! Quero fazer meu Diagnóstico Patrimonial.\nNome: ${data.nome}\nTelefone: ${data.telefone}\nE-mail: ${data.email}\nO que desejo: ${data.interesse}`;
+  const texto = `Olá! Quero fazer meu Diagnóstico Patrimonial.\nNome: ${data.nome}\nTelefone: ${data.telefone}\nE-mail: ${data.email}\nRenda familiar: ${data.renda}\nO que desejo: ${data.interesse}`;
   document.getElementById('dwpp').href = `https://wa.me/${WPP}?text=${encodeURIComponent(texto)}`;
   dsend.disabled = true; dsend.textContent = 'Enviando...';
   try {
