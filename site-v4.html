@@ -135,6 +135,15 @@ image-slot{display:block;background:#dfe3e8;--is-placeholder-color:rgba(13,27,42
 .pill:hover{background:#fff;color:var(--navy);}
 .met-txt{max-width:900px;margin:44px auto 0;font-size:15.5px;line-height:1.8;color:var(--txt);font-weight:500;}
 
+/* ---------- CONSULTORIAS ---------- */
+.cons{max-width:860px;margin:0 auto;display:flex;flex-direction:column;gap:16px;}
+.con{display:flex;align-items:center;gap:30px;background:#fff;border:1px solid var(--line);border-radius:14px;padding:24px 32px;transition:border-color .25s,transform .25s,box-shadow .25s;}
+.con:hover{border-color:var(--ouro);transform:translateY(-3px);box-shadow:0 18px 34px -24px rgba(13,27,42,.35);}
+.con .n{font-family:var(--serif);font-style:italic;font-size:40px;font-weight:500;color:var(--ouro-d);line-height:1;width:58px;flex-shrink:0;}
+.con h3{font-size:13.5px;font-weight:700;letter-spacing:.08em;text-transform:uppercase;color:var(--navy);margin-bottom:6px;}
+.con p{font-size:15px;color:var(--cinza);line-height:1.6;}
+.con p b{color:var(--navy);font-weight:700;}
+
 /* ---------- SERVIÇOS (cards com foto 2x2) ---------- */
 .svc-grid{display:grid;grid-template-columns:repeat(2,300px);gap:40px 56px;justify-content:center;}
 .svc{position:relative;height:300px;overflow:hidden;display:block;}
@@ -210,6 +219,8 @@ image-slot{display:block;background:#dfe3e8;--is-placeholder-color:rgba(13,27,42
   .svc{width:100%;max-width:340px;margin:0 auto;}
   .svc-desc{margin-left:auto;margin-right:auto;}
   .proc{grid-template-columns:1fr;}
+  .con{gap:18px;padding:20px 20px;}
+  .con .n{font-size:32px;width:42px;}
   .pro image-slot{width:150px;height:150px;}
   .h-left{letter-spacing:.25em;}
 }
@@ -242,6 +253,7 @@ image-slot{display:block;background:#dfe3e8;--is-placeholder-color:rgba(13,27,42
     <nav class="nav-links" id="links">
       <a href="#quem-somos">Quem Somos</a>
       <a href="#metodo">Método LAR</a>
+      <a href="#consultorias">Consultorias</a>
       <a href="#servicos">Serviços</a>
       <a href="#processos">Processos</a>
     </nav>
@@ -358,8 +370,23 @@ image-slot{display:block;background:#dfe3e8;--is-placeholder-color:rgba(13,27,42
   </div>
 </section>
 
+<!-- ============ CONSULTORIAS ============ -->
+<section class="sec" id="consultorias">
+  <div class="wrap">
+    <h2 class="h-sec">Consultorias</h2>
+    <p class="h-sub">Soluções desenhadas para cada momento do seu patrimônio</p>
+    <div class="cons reveal">
+      <div class="con"><div class="n">01</div><div><h3>Aquisição planejada de imóveis e automóveis</h3><p>Consórcio novo, com contemplação por meio de lances estratégicos, <b>sem uso de recurso próprio</b>.</p></div></div>
+      <div class="con"><div class="n">02</div><div><h3>Aquisição estruturada com lance livre</h3><p>Consórcio novo, com lance montado a partir de <b>recurso próprio + FGTS + lance embutido</b>.</p></div></div>
+      <div class="con"><div class="n">03</div><div><h3>Cartas contempladas</h3><p>Crédito já liberado para imóveis e automóveis. Em imóveis, trabalhamos com <b>ágio médio de 38% e custo médio de 0,92% ao mês</b>, uma condição muito competitiva no mercado.</p></div></div>
+      <div class="con"><div class="n">04</div><div><h3>Aumento de patrimônio</h3><p>Estratégias de <b>alavancagem financeira e/ou patrimonial</b>, desenhadas para o objetivo de cada cliente.</p></div></div>
+      <div class="con"><div class="n">05</div><div><h3>Levantamento de capital com imóvel próprio</h3><p>Venda do imóvel do CPF para o CNPJ (ou o inverso), <b>sem necessidade de transferência de escritura</b>.</p></div></div>
+    </div>
+  </div>
+</section>
+
 <!-- ============ SERVIÇOS ============ -->
-<section class="sec" id="servicos">
+<section class="sec gray" id="servicos">
   <div class="wrap">
     <h2 class="h-sec">Serviços Exclusivos</h2>
     <p class="h-sub">O que a AMV Patrimônio oferece aos seus clientes</p>
@@ -397,7 +424,7 @@ image-slot{display:block;background:#dfe3e8;--is-placeholder-color:rgba(13,27,42
 </section>
 
 <!-- ============ PROCESSOS ============ -->
-<section class="sec gray" id="processos">
+<section class="sec" id="processos">
   <div class="wrap">
     <h2 class="h-sec">Processos</h2>
     <p class="h-sub">Uma jornada, não um evento isolado. Acompanhamos cada etapa.</p>
@@ -417,8 +444,9 @@ image-slot{display:block;background:#dfe3e8;--is-placeholder-color:rgba(13,27,42
     <h2 class="h-sec">Administradoras Parceiras</h2>
     <div class="h-rule"></div>
     <div class="logos reveal">
-      <image-slot id="logo1" shape="rounded" radius="6" fit="cover" src="img/parceiros/rodobens.png" placeholder="Logo Rodobens"></image-slot>
       <image-slot id="logo2" shape="rounded" radius="6" fit="cover" src="img/parceiros/hs.png" placeholder="Logo HS Consórcios"></image-slot>
+      <image-slot id="logo1" shape="rounded" radius="6" fit="cover" src="img/parceiros/rodobens.png" placeholder="Logo Rodobens"></image-slot>
+      <image-slot id="logo4" shape="rounded" radius="6" fit="cover" src="img/parceiros/racon.jpg" placeholder="Logo Racon Consórcios"></image-slot>
       <image-slot id="logo3" shape="rounded" radius="6" fit="cover" src="img/parceiros/disal.jpg" placeholder="Logo Disal Consórcio"></image-slot>
     </div>
   </div>
@@ -488,7 +516,7 @@ burger.addEventListener('click', () => links.classList.toggle('open'));
 links.querySelectorAll('a').forEach(a => a.addEventListener('click', () => links.classList.remove('open')));
 
 // item do menu ativo durante a rolagem
-const ids = ['quem-somos','metodo','servicos','processos'];
+const ids = ['quem-somos','metodo','consultorias','servicos','processos'];
 const setActive = () => {
   let cur = null;
   ids.forEach(id => { const el = document.getElementById(id); if (el && el.getBoundingClientRect().top < 160) cur = id; });
